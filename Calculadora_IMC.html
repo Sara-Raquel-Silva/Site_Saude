@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Informação sobre saúde e bem-estar, para manter-se sempre consciente sem dificuldades!"
+    />
+    <title>Saúde e Bem-estar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <a class="logohome" href="index.html">Saúde &<br />Bem-estar</a>
+      <nav id="nav">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu
+          <span id="icon"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a class="menuitem" href="saude.html">Saúde</a></li>
+          <li>
+            <a class="menuitem" href="Dicas.html">Dicas de saúde</a>
+          </li>
+          <li>
+            <a class="menuitem" href="Calculadora_IMC.html">Calculadora IMC</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="conteudo">
+      <section class="conteudo-principal1">
+        <div class="conteudo-escrito">
+          <h1 class="conteudo-escrito-titulo1">O que é IMC?</h1>
+          <!--<h2 class="conteudo-escrito-texto">O que são? </h2>-->
+          <p class="conteudo-escrito-texto1">
+            O IMC (Índice de Massa Corporal) é uma medida usada para avaliar se
+            uma pessoa está dentro do peso ideal, de acordo com sua altura. Ele
+            é calculado dividindo o peso (em quilogramas) pela altura ao
+            quadrado (em metros). O valor resultante é comparado a uma tabela
+            para determinar se a pessoa está abaixo do peso, com peso normal,
+            sobrepeso ou obesidade.
+          </p>
+        </div>
+        <img
+            class="conteudo-imagem-tds"
+            src="images/2.png"
+            alt="Imagem ilustrada"
+          />
+      </section>
+
+      <section class="conteudo-informacoes">
+        <h3 class="conteudo-informacoes-titulo1">Calculadora de IMC</h3>
+        <p class="conteudo-informacoes-p1">
+          A fórmula é: IMC = Peso (kg) / Altura² (m²)
+        </p>
+        <form onsubmit="calcularIMC(event)">
+            <label for="peso">Peso (kg):</label>
+            <input
+              type="number"
+              id="peso"
+              name="peso"
+              min="1"
+              step="any"
+              placeholder="Ex: 70"
+              required
+            /><br />
+  
+            <label for="altura">Altura (cm):</label>
+            <input
+              type="number"
+              id="altura"
+              name="altura"
+              min="50"
+              step="any"
+              placeholder="Ex: 170"
+              required
+            /><br />
+  
+            <button type="submit">Calcular IMC</button>
+          </form>
+          <p id="resultado"></p>
+        <p class="conteudo-informacoes-p1"></p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <a
+        class="link-util"
+        target="_blank"
+      <p class="rodape-nome">&copy; 2024 Saúde e Cuidados Pessoais</p>
+      <p class="rodape-nome"> &copy; 2024 Restic36 </p></a
+      >
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!--FUNCIONALIDADE MENU MOBILE-->
+  </body>
+</html>

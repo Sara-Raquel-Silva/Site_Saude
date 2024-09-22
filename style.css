@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: mone;
+  font-family: "League Spartan", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(68.15deg, #0bb791, #7ed957);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.logohome {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/*#nav{
+    display: flex;
+    gap: 32px;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+} */
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  border-color: aliceblue;
+  border: solid 1px;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+.conteudo {
+  margin-bottom: 20px;
+  border-top: 0.4px solid whitesmoke;
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+}
+
+.conteudo-escrito-titulo {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.conteudo-escrito-texto {
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.conteudo-botao {
+  background-color: #83c48e;
+  border: none;
+  width: 175px;
+  height: 60px;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+}
+
+.conteudo-informacoes {
+  font-family: "League Spartan", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.conteudo-informacoes-titulo {
+  border-top: 0.4px solid white;
+  padding-top: 45px;
+  font-size: 30px;
+}
+
+.conteudo-informacoes-p {
+  font-size: 20px;
+}
+
+.rodape {
+  border-top: 0.4px solid white;
+  padding: 51px;
+  display: flex;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+/* aqui começa a estilização da page saúde*/
+.conteudo-imagem-tds {
+  height: 500px;
+}
+
+.conteudo-principal1 {
+  color: white;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-escrito-texto1 {
+  width: 700px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.conteudo-escrito-titulo1 {
+  font-size: 35px;
+}
+
+.conteudo-informacoes-p1 {
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.conteudo-informacoes-titulo1 {
+  border-top: 0.4px solid white;
+  padding-top: 45px;
+  font-size: 25px;
+}
+
+.link-util {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* aqui termina a estilização da page saúde*/
+
+@media (max-width: 700px) {
+  html,
+  body {
+    height: auto;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: whitesmoke;
+    transition: 0.6s;
+    height: 0px;
+    z-index: 1000;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: black;
+  }
+
+  button {
+    color: whitesmoke;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #icon {
+    border-top: 2px solid;
+    width: 20px;
+    color: whitesmoke;
+  }
+
+  #icon::after,
+  #icon::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: whitesmoke;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #icon {
+    border-top: transparent;
+  }
+
+  #nav.active #icon::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #icon::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .conteudo-escrito {
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  .conteudo-escrito-titulo {
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  .conteudo-escrito-texto {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .conteudo-imagem {
+    height: 225px;
+  }
+
+  .conteudo-botao {
+    background-color: #83c48e;
+    border: none;
+    width: 100px;
+    height: 35px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 11px;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+  }
+
+  .conteudo-informacoes {
+    gap: 25px;
+    padding-bottom: 40px;
+  }
+
+  .conteudo-informacoes-titulo {
+    border-top: 0.4px solid white;
+    padding-top: 25px;
+    font-size: 20px;
+  }
+
+  .conteudo-informacoes-p {
+    font-size: 12px;
+  }
+
+  .rodape {
+    font-size: 15px;
+    gap: 20px;
+    margin: 50px;
+  }
+
+  /* aqui começa a estilização da page saúde*/
+  .conteudo-imagem-tds {
+    height: 150px;
+  }
+
+  .conteudo-principal1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .conteudo-escrito-titulo1 {
+    font-size: 17px;
+  }
+
+  .conteudo-escrito-texto1 {
+    width: 80%;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .conteudo-informacoes-p1 {
+    font-size: 15px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .conteudo-informacoes-titulo1 {
+    border-top: 0.4px solid white;
+    padding-top: 45px;
+    font-size: 15px;
+  }
+
+  .link-util {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  /* aqui termina a estilização da page saúde*/
+}
+
+/* Estilizando o formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Estilizando os rótulos (labels) */
+form label {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Estilizando os campos de entrada (input) */
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #0bb791;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  color: #333;
+}
+
+/* Alterando a cor dos campos quando estão em foco */
+form input:focus {
+  border-color: #7ed957;
+  outline: none;
+}
+
+/* Estilizando o botão de envio */
+form button {
+  background-color: #0bb791;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Alterando a cor do botão ao passar o mouse */
+form button:hover {
+  background-color: #7ed957;
+}
+
+/* Estilizando a área de resultado */
+#resultado {
+  font-size: 20px;
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+}

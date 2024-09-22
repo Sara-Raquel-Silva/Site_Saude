@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Informação sobre saúde e bem-estar, para manter-se sempre consciente sem dificuldades!"
+    />
+    <title>Saúde e Bem-estar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <a class="logohome" href="index.html">Saúde &<br />Bem-estar</a>
+      <nav id="nav">
+        <!--LINK HOME-->
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu <span id="icon"></span>
+          <!-- botão menu mobile -->
+        </button>
+        <ul id="menu" role="menu">
+          <!-- menu do site -->
+          <li><a class="menuitem" href="saude.html">Saúde</a></li>
+          <li>
+            <a class="menuitem" href="Dicas.html">Dicas de saúde</a>
+          </li>
+          <li>
+            <a class="menuitem" href="Calculadora_IMC.html">Calculadora IMC</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="conteudo">
+      <!-- conteúdo principal, todas as páginas seguem o mesmo formato -->
+      <section class="conteudo-principal">
+        <div class="conteudo-escrito">
+          <h1 class="conteudo-escrito-titulo">
+            Bem-vindo ao Seu Portal de Saúde & Bem-Estar!
+          </h1>
+        </div>
+        <img
+          class="conteudo-imagem-tds"
+          src="images/1.png"
+          alt="logo grande da saúde e bem-estar"
+        />
+      </section>
+
+      <section class="conteudo-informacoes">
+        <h3 class="conteudo-informacoes-titulo">
+          Cuidar do corpo e da mente é essencial para uma vida saudável e
+          equilibrada.
+        </h3>
+        <p class="conteudo-informacoes-p">
+          Aqui, você encontra informações, dicas e ferramentas para melhorar sua
+          qualidade de vida. Descubra como adotar hábitos saudáveis, controlar
+          seu peso e entender melhor o seu corpo por meio do Índice de Massa
+          Corporal (IMC), um indicador importante para avaliar se você está no
+          peso ideal.
+        </p>
+        <h3 class="conteudo-informacoes-titulo">
+          Explore nossos conteúdos sobre alimentação, exercícios físicos e saúde
+          mental para viver melhor todos os dias!
+        </h3>
+        <h3 class="conteudo-informacoes-titulo">
+          Utilize a nossa Calculadora de IMC.
+        </h3>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <!-- rodapé do site -->
+      <p class="rodape-nome">&copy; 2024 Saúde e Cuidados Pessoais</p>
+      <p class="rodape-nome">&copy; 2024 Restic36</p>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!--FUNCIONALIDADE MENU MOBILE-->
+  </body>
+</html>
